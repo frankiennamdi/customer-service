@@ -43,40 +43,31 @@ Most required commands has been wrapped and included in the **build.sh** file
       TypeError: 'module' object is not callable
     ``` 
     
-
-3. **Start Neo4j container**
-
-    In another terminal start the Neo4j database. 
-    
-    ```bash
-    docker-compose up
-    ```
-
-4. **Install dependencies and run test** 
+3. **Install dependencies and run test** 
 
     ```bash
     ./build.sh install-test
     ```
 
-5. **Continuously run test**
+4. **Continuously run test**
 
     ```bash
     ./build.sh test
     ```
 
-6. **Start server**
+5. **Start server**
 
     ```bash
     ./build.sh run-local
     ```
 
-7. **Access the endpoint**
+6. **Access the endpoint**
 
     For running queries.
 
     http://localhost:9090/api/customer
 
-8. **Build Image**
+7. **Build Image**
     ```bash
     ./build.sh build-image
    ```    
@@ -85,17 +76,13 @@ Most required commands has been wrapped and included in the **build.sh** file
     ./build.sh run-image
    ```    
    
-8. **Remove Container**
+9. **Remove Container**
     ```bash
     ./build.sh remove-customer-service 
    ```    
 ## Data
   
 ### Model
-
-Here we define some of the assumptions we make about the data, and its semantics.
-This is just a contrived model with made up data to be able to answer some of the questions about a
-person's relationship and their family tree. 
 
 1. **Customer Result Schema:** 
     
@@ -173,6 +160,8 @@ Sample Error:
  
  ## Future Improvements
  * More testing for edge cases and bad data states. 
+ * Handle cases where there is more than 1 valid subscription, possibly
+ define a way to be more selective. Possibly using date or order.
   
  
 

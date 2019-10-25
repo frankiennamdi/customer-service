@@ -1,0 +1,40 @@
+{
+    "id": "customer_3",
+    "metadata": {
+      "apiCalls": "5000",
+      "storage": "5GB"
+    },
+    "name": "Test Customer 3",
+    "object": "customer",
+    "subscriptions": {
+      "data": [
+        {
+          "current_period_end": 1569691245,
+          "current_period_start": 1567099267,
+          "customer": "customer_3",
+          "id": "subscription_5",
+          "items": {
+            "data": [
+              {
+                "id": "item_5",
+                "object": "subscription_item",
+                "plan": {
+                  "active": true,
+                  "id": "plan_1",
+                  "object": "plan",
+                  "product": "product_1",
+                  "usage_type": "licensed"
+                },
+                "subscription": "subscription_5"
+              }
+            ],
+            "total_count": 1
+          },
+          "object": "subscription",
+          "status": "active"
+        }
+      ],
+      "total_count": 1
+    }
+  }
+  
