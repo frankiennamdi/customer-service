@@ -1,0 +1,11 @@
+{
+  "id": "product_1",
+  "name": "Sample Product License",
+  "metadata": {
+    "apiCalls": "2000",
+    "storage": "500MB",
+    "requestSize": "1KB"
+  },
+  "object": "product"
+}
+  

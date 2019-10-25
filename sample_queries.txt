@@ -1,0 +1,13 @@
+query customer2 {
+  customer(customerId: 2) {
+    subscriptionStartsAt
+    subscriptionEndsAt
+    status
+    allowsApiOverage
+    details {
+      apiCalls
+      storage
+      requestSize
+    }
+  }
+}

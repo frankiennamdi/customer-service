@@ -1,0 +1,62 @@
+{
+    "id": "customer_2",
+    "metadata": {},
+    "name": "Test Customer 2",
+    "object": "customer",
+    "subscriptions": {
+      "data": [
+        {
+          "current_period_end": 1569777871,
+          "current_period_start": 1567099471,
+          "customer": "customer_2",
+          "id": "subscription_2",
+          "items": {
+            "data": [
+              {
+                "id": "item_3",
+                "object": "subscription_item",
+                "plan": {
+                  "active": true,
+                  "id": "plan_2",
+                  "object": "plan",
+                  "product": "product_2",
+                  "usage_type": "metered"
+                },
+                "subscription": "subscription_2"
+              }
+            ],
+            "total_count": 1
+          },
+          "object": "subscription",
+          "status": "active"
+        },
+        {
+          "current_period_end": 1569691447,
+          "current_period_start": 1567099447,
+          "customer": "customer_3",
+          "id": "subscription_3",
+          "items": {
+            "data": [
+              {
+                "id": "item_4",
+                "object": "subscription_item",
+                "subscription": "subscription_3",
+                "plan": {
+                  "active": true,
+                  "id": "plan_1",
+                  "object": "plan",
+                  "product": "product_1",
+                  "usage_type": "licensed"
+                }
+              }
+            ],
+            "total_count": 1
+          },
+          "object": "subscription",
+          "status": "trialing"
+        }
+      ],
+      "total_count": 2
+    }
+  }
+  

@@ -1,0 +1,10 @@
+{
+    "id": "product_1",
+    "metadata": {
+      "storage": "500MB",
+      "requestSize": "1KB"
+    },
+    "name": "Sample Product License",
+    "object": "product"
+}
+  
