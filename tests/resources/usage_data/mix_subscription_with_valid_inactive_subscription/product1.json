@@ -1,6 +1,5 @@
 {
-    "id": "product_1",
-    "name": "Sample Product License",
-    "object": "product"
+  "id": "product_1",
+  "name": "Sample Product License",
+  "object": "product"
 }
-  
