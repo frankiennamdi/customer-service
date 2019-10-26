@@ -1,9 +1,8 @@
 {
   "id": "customer_1",
   "metadata": {
-    "apiCalls": "5000",
-    "storage": "600MB",
-    "requestSize": "2KB"
+    "storage": "600 MB",
+    "requestSize": "3KB"
   },
   "name": "Test Customer 1",
   "object": "customer",

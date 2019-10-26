@@ -70,6 +70,24 @@ class TestPayCoDataService:
         self._logger.info(json.dumps(usage_data, indent=4, sort_keys=True))
         assert TestUtils.assert_equals(usage_data, expected_usage_data)
 
+    def test_process_usage_with_valid_product_plan_with_partial_and_invalid_customer_override(self):
+        service = LocalPayCoDataService(
+            'tests/resources/usage_data/valid_product_plan_with_partial_and_invalid_customer_override')
+        usage_data = service.process_usage(1)
+        expected_usage_data = {
+            "allowsApiOverage": True,
+            "details": {
+                "apiCalls": "1000",
+                "storage": "500MB",
+                "requestSize": "3KB"
+            },
+            "status": "active",
+            "subscriptionStartsAt": 1567099267,
+            "subscriptionEndsAt": 1569691245
+        }
+        self._logger.info(json.dumps(usage_data, indent=4, sort_keys=True))
+        assert TestUtils.assert_equals(usage_data, expected_usage_data)
+
     def test_process_usage_with_mix_subscription_with_valid_inactive_subscription(self):
         service = LocalPayCoDataService('tests/resources/usage_data/mix_subscription_with_valid_inactive_subscription')
         usage_data = service.process_usage(1)
