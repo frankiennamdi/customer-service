@@ -100,7 +100,7 @@ class LocalPayCoDataService:
                         current_usage_data['details'] = licensed_product['metadata']
 
             usage_info.update_usage_data(current_usage_data)
-        # override
+        # apply override
         usage_info = self.apply_overrides(customer, usage_info)
         return usage_info.usage_data
 

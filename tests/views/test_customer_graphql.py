@@ -73,7 +73,7 @@ class TestCustomerGraphQlView:
         self._logger.info(json.dumps(data, indent=4, sort_keys=True))
         assert TestUtils.assert_equals(data['data']['customer'], expected_usage_data)
 
-    def test_find_customer_usage__with_invalid_product_plan(self, flask_test_client):
+    def test_find_customer_usage_with_invalid_product_plan(self, flask_test_client):
         response = flask_test_client.post(url_string(), data=query('customer', 4), content_type='application/json')
         assert response.status_code == 200
         data = response_json(response)
