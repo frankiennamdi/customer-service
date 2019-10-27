@@ -8,10 +8,12 @@ searching for customer subscription data and the usage details.
 ## Requirements
 
 * PyCharm - or your favorite IDE.
-* Docker/Docker Compose - for running Neo4J container.
+* Docker for building and running image
 * Python 3.7
 * Pipenv - virtual environment and dependency manager.
 * Bash - scripts and command execution.
+
+**Note: Tested on Mac OS**
 
 ## Executions
 
