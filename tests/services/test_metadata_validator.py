@@ -20,7 +20,7 @@ class TestMetadataValidator:
                               ({'requestSize': '100 MB'}, MetadataValidationResult(Result.INVALID, '100 MB')),
                               ({}, MetadataValidationResult(Result.ABSENT))
                               ])
-    def test_request_size(self, input_dict, expected_validation_result):
+    def test_request_size_validation(self, input_dict, expected_validation_result):
         validation_result = MetadataValidator.validate_request_size(input_dict)
         assert validation_result.value == expected_validation_result.value
         assert validation_result.result == expected_validation_result.result
@@ -30,7 +30,7 @@ class TestMetadataValidator:
                               ({'storage': '100 MB'}, MetadataValidationResult(Result.INVALID, '100 MB')),
                               ({}, MetadataValidationResult(Result.ABSENT))
                               ])
-    def test_storage_size(self, input_dict, expected_validation_result):
+    def test_storage_size_validation(self, input_dict, expected_validation_result):
         validation_result = MetadataValidator.validate_storage(input_dict)
         assert validation_result.value == expected_validation_result.value
         assert validation_result.result == expected_validation_result.result

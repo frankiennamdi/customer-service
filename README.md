@@ -3,7 +3,8 @@
 ## Description
 
 This service provide a GraphQL api querying subscription data about a customer. This minimal product supports
-searching for customer subscription data and the usage details. 
+searching for customer subscription data and the usage details. One key advantage of GraphQL is strongly typed schema backed
+service api. 
 
 ## Requirements
 
@@ -57,7 +58,7 @@ Most required commands has been wrapped and included in the **build.sh** file
     ./build.sh test
     ```
 
-5. **Start server**
+5. **Start server on machine**
 
     ```bash
     ./build.sh run-local
@@ -73,7 +74,7 @@ Most required commands has been wrapped and included in the **build.sh** file
     ```bash
     ./build.sh build-image
    ```    
-8. **Run Image**
+8. **Run Docker Container**
     ```bash
     ./build.sh run-image
    ```    
@@ -163,6 +164,16 @@ Sample Error:
         "customer": null
       }
     }
+```
+
+Sample Output when data is invalid:
+
+```json
+{
+  "data": {
+    "customer": null
+  }
+}
 ```
  
  ## Future Improvements
