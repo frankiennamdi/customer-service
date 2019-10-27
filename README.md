@@ -83,7 +83,12 @@ Most required commands has been wrapped and included in the **build.sh** file
     ./build.sh remove-customer-service 
    ```    
 ## Data
-  
+### Assumptions and Convention
+
+1. Product and customer filenames are of the form **customer[Num].json** and **product[Num].json**. E.g. customer1.json
+and product1.json.
+2. Product and customer id are of the form **customer_[Num]** and **product_[Num]**. E.g. customer_1 and product_1
+
 ### Model
 
 1. **Customer Result Schema:** 
@@ -107,7 +112,7 @@ Most required commands has been wrapped and included in the **build.sh** file
           }
         }
     ```
-       
+
 ## User Interface
 
 The application use  **GRAPHIQL** interface that makes it easy to execute graphql
