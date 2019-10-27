@@ -116,7 +116,7 @@ and product1.json.
 ## Sample Curl Execution
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d @sample_query.json http://localhost:9090/api/customer
+curl -X POST -H "Content-Type: application/json" -d @sample_query.json http://localhost:9090/api/customer | jq .
 ```
 
 ## User Interface
