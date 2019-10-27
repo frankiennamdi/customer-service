@@ -105,7 +105,13 @@ Most required commands has been wrapped and included in the **build.sh** file
           }
         }
     ```
-       
+   
+## Sample Curl Execution
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d @sample_query.json http://localhost:9090/api/customer
+```
+
 ## User Interface
 
 The application use  **GRAPHIQL** interface that makes it easy to execute graphql
