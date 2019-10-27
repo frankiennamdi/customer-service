@@ -3,15 +3,18 @@
 ## Description
 
 This service provide a GraphQL api querying subscription data about a customer. This minimal product supports
-searching for customer subscription data and the usage details. 
+searching for customer subscription data and the usage details. One key advantage of GraphQL is strongly typed schema backed
+service api. 
 
 ## Requirements
 
 * PyCharm - or your favorite IDE.
-* Docker/Docker Compose - for running Neo4J container.
+* Docker for building and running image
 * Python 3.7
 * Pipenv - virtual environment and dependency manager.
 * Bash - scripts and command execution.
+
+**Note: Tested on Mac OS**
 
 ## Executions
 
@@ -55,7 +58,7 @@ Most required commands has been wrapped and included in the **build.sh** file
     ./build.sh test
     ```
 
-5. **Start server**
+5. **Start server on machine**
 
     ```bash
     ./build.sh run-local
@@ -71,7 +74,7 @@ Most required commands has been wrapped and included in the **build.sh** file
     ```bash
     ./build.sh build-image
    ```    
-8. **Run Image**
+8. **Run Docker Container**
     ```bash
     ./build.sh run-image
    ```    
@@ -81,7 +84,12 @@ Most required commands has been wrapped and included in the **build.sh** file
     ./build.sh remove-customer-service 
    ```    
 ## Data
-  
+### Assumptions and Convention
+
+1. Product and customer filenames are of the form **customer[Num].json** and **product[Num].json**. E.g. customer1.json
+and product1.json.
+2. Product and customer id are of the form **customer_[Num]** and **product_[Num]**. E.g. customer_1 and product_1
+
 ### Model
 
 1. **Customer Result Schema:** 
@@ -105,7 +113,7 @@ Most required commands has been wrapped and included in the **build.sh** file
           }
         }
     ```
-       
+
 ## User Interface
 
 The application use  **GRAPHIQL** interface that makes it easy to execute graphql
@@ -156,6 +164,16 @@ Sample Error:
         "customer": null
       }
     }
+```
+
+Sample Output when data is invalid:
+
+```json
+{
+  "data": {
+    "customer": null
+  }
+}
 ```
  
  ## Future Improvements

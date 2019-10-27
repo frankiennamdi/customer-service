@@ -8,7 +8,8 @@ def run_app():
     LoggingConfigurator.configure_logging()
     app_config = FileConfig()
     app = create_app()
-    app.run(host='0.0.0.0', port=int(app_config.get_value(Config.APP_CONFIG, Config.SERVER_PORT)))
+    app.run(host=app_config.get_value(Config.APP_CONFIG, Config.SERVER_HOST),
+            port=int(app_config.get_value(Config.APP_CONFIG, Config.SERVER_PORT)))
 
 
 if __name__ == '__main__':

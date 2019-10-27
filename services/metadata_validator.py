@@ -14,7 +14,7 @@ def log_invalid_metadata(metadata_key):
     def wrap(function):
         def wrapper(*args, **kwargs):
             validation_result = function(*args, **kwargs)
-            if validation_result.result != Result.VALID:
+            if validation_result.result == Result.INVALID:
                 _logger.warning("metadata key {} was invalid {}".format(metadata_key, validation_result))
             return validation_result
 
