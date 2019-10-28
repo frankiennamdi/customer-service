@@ -2,14 +2,14 @@
 
 ## Description
 
-This service provide a GraphQL api querying subscription data about a customer. This minimal product supports
+This service provides a GraphQL api querying subscription data about a customer. This minimal product supports
 searching for customer subscription data and the usage details. One key advantage of GraphQL is strongly typed schema backed
 service api. 
 
 ## Requirements
 
 * PyCharm - or your favorite IDE.
-* Docker for building and running image
+* Docker for building and running images.
 * Python 3.7
 * Pipenv - virtual environment and dependency manager.
 * Bash - scripts and command execution.
@@ -18,7 +18,7 @@ service api.
 
 ## Executions
 
-Most required commands has been wrapped and included in the **build.sh** file 
+Most required commands are wrapped and included in the **build.sh** file 
 
 1. **View available commands** 
 
@@ -28,7 +28,9 @@ Most required commands has been wrapped and included in the **build.sh** file
 
 2. **Prepare your environment** 
   
-    If you have a recent version of pip installed. So you may have to downgrade. If you get the following error you can resolve it using the following
+    If you have a recent version of pip installed, you may have to downgrade. This is usually indicated if you encounter the 
+    following error. 
+    
     command:
 
     ```bash
@@ -46,13 +48,13 @@ Most required commands has been wrapped and included in the **build.sh** file
       TypeError: 'module' object is not callable
     ``` 
     
-3. **Install dependencies and run test** 
+3. **Install dependencies and run tests** 
 
     ```bash
     ./build.sh install-test
     ```
 
-4. **Continuously run test**
+4. **Continuously run tests**
 
     ```bash
     ./build.sh test
@@ -183,8 +185,7 @@ Sample Output when data is invalid:
  
  ## Future Improvements
  * More testing for edge cases and bad data states. 
- * Handle cases where there is more than 1 valid subscription, possibly
- define a way to be more selective. Possibly using date or order.
+ * Handle cases where there is more than 1 valid subscription, possibly define a way to be more selective and possibly use the date or order.
   
  
 
